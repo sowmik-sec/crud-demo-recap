@@ -20,13 +20,13 @@ public class CrudDemoRecapApplication {
     public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
         return runner -> {
             // createStudent(studentDAO);
-            // createMultipleStudents(studentDAO);
+            createMultipleStudents(studentDAO);
             // readStudent(studentDAO);
             // queryForStudents(studentDAO);
             // queryForStudentsByLastName(studentDAO);
             // updateStudent(studentDAO);
             // deleteStudent(studentDAO);
-            deleteAllStudents(studentDAO);
+            //deleteAllStudents(studentDAO);
         };
     }
 
@@ -108,7 +108,7 @@ public class CrudDemoRecapApplication {
         Student tempStudent3 = new Student("Adolf", "Hitler", "adlof@hitler.com");
 
         // save the student objects
-        System.out.println("Saving teh students...");
+        System.out.println("Saving the students...");
         studentDAO.save(tempStudent1);
         studentDAO.save(tempStudent2);
         studentDAO.save(tempStudent3);
